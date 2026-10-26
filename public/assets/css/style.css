@@ -1,0 +1,49 @@
+.timer {
+    font-variant-numeric: tabular-nums;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: .15rem .75rem;
+    border-radius: .5rem;
+    background: #e7f1ff;
+    color: #0a58ca;
+}
+.timer.merah {
+    background: #f8d7da;
+    color: #b02a37;
+    animation: kedip 1s infinite;
+}
+@keyframes kedip {
+    50% { opacity: .6; }
+}
+
+.opsi {
+    border: 1px solid #dee2e6;
+    border-radius: .5rem;
+    padding: .75rem .75rem .75rem 2.25rem;
+    cursor: pointer;
+}
+.opsi:hover { background: #f8f9fa; }
+.opsi label { cursor: pointer; }
+
+.panel-nomor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: .4rem;
+}
+.nomor {
+    display: block;
+    text-align: center;
+    padding: .35rem 0;
+    border: 1px solid #ced4da;
+    border-radius: .35rem;
+    background: #fff;
+    color: #212529;
+    text-decoration: none;
+    font-size: .9rem;
+}
+.nomor.dijawab { background: #0d6efd; border-color: #0d6efd; color: #fff; }
+.nomor.aktif { background: #ffc107; border-color: #ffc107; color: #212529; font-weight: 700; }
+.nomor.aktif.dijawab { box-shadow: inset 0 0 0 3px #0d6efd; }
+
+#status-simpan.gagal { color: #dc3545 !important; }
+#form-selesai { display: none; }
